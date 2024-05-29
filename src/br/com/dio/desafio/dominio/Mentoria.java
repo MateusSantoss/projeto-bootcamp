@@ -7,43 +7,32 @@ import java.time.LocalDate;
  * @since 29/05/2024
  * @version 1.0
  */
-public class Mentoria {
-    private String titulo;
-    private String descricao;
+public class Mentoria extends Conteudo {
     private LocalDate data;
 
     /**
      * @param titulo
      */
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
 
-    }
-
-    public String getTitulo() {
-        return this.titulo;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-
-    }
-
-    public String getDescricao () {
-        return this.descricao;
+    @Override
+    /**
+     * Calcular o xp, toda fez que uma nova mentoria é instanciado o método irá retornar o XP_PADRAO + 20d
+     */
+    public double calcularXp() {
+        return XP_PADRAO + 20d;
     }
 
     /**
      * @param data
      */
-    public void setData (LocalDate data) {
+    public void setData(LocalDate data) {
         this.data = data;
 
     }
 
     @Override
     public String toString() {
-        return "Mentoria [titulo=" + titulo + ", descricao=" + descricao + ", data=" + data + "]";
+        return "Mentoria [data=" + data + "]";
     }
 
 }
