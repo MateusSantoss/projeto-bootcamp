@@ -30,6 +30,22 @@ public class BootCamp {
         return this.nome;
     }
 
+    public Set<Dev> getDevsInscritos() {
+        return devsInscritos;
+    }
+
+    public void setDevsInscritos(Set<Dev> devsInscritos) {
+        this.devsInscritos = devsInscritos;
+    }
+
+    public Set<Conteudo> getConteudos() {
+        return conteudos;
+    }
+
+    public void setConteudos(Set<Conteudo> conteudos) {
+        this.conteudos = conteudos;
+    }
+
     public void setDescricao (String descricao) {
         this.descricao = descricao;
     }
@@ -100,6 +116,12 @@ public class BootCamp {
         } else if (!conteudos.equals(other.conteudos))
             return false;
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "BootCamp [nome=" + nome + ", descricao=" + descricao + ", dataInicial=" + dataInicial + ", dataFinal="
+                + dataFinal + ", devsInscritos=" + devsInscritos + ", conteudos=" + conteudos + "]";
     }
 
 }
